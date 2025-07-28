@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const timerElement = document.getElementById("timer");
     if (!timerElement) return;
 
-    // Early bird ends Monday night before course starts on Tuesday, July 29
-    const countDownDate = new Date("July 28, 2025 23:59:59").getTime();
+    // Early bird ends Monday night before course starts on Tuesday, July 31
+    const countDownDate = new Date("July 31, 2025 23:59:59").getTime();
 
     function pad(num) {
         return num < 10 ? "0" + num : num;
