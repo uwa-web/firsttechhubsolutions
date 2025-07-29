@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Workspace Mastery Course - First Tech Hub Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-   </head>
+    <!-- Paystack Payment Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="stylesheet" href="index.css"
+    
+</head>
 <body>
     <header class="header">
         <div class="container">
@@ -20,21 +23,164 @@
             <p class="sub-headline">Join Batch 4.0 and gain the practical digital skills you need to land high-paying jobs, attract clients, and boost your confidence. No tech experience required!</p>
             
             <div class="hero-video">
-    <iframe width="100%" height="100%" 
-        src="https://www.youtube.com/embed/chnirzDv9C8" 
-        title="YouTube video player" 
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
-</div>
+                <iframe width="100%" height="100%" 
+                    src="https://www.youtube.com/embed/chnirzDv9C8" 
+                    title="YouTube video player" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-            
-            <a href="https://selar.com/googleworkspacetraining" class="btn">Enroll Now for ₦10,000</a>
-            
+            <button id="heroPayBtn" class="btn">Enroll Now for ₦9,999</button>
+
             <div class="countdown">
                 <h3>Early Bird Offer Ends In:</h3>
                 <div id="timer">00D 00H 00M 00S</div>
+            </div>
+
+            <!-- Hidden Form for Hero Section -->
+            <div id="heroFormContainer" class="hidden-form">
+                <div class="checkout-container">
+                    <div class="checkout-header">
+                        <div class="checkout-title">My cart → Checkout</div>
+                        <button class="checkout-close" id="closeHeroForm">×</button>
+                    </div>
+                    <form id="heroPaymentForm" class="checkout-form">
+                        <div class="form-section">
+                            <h3>Contact information</h3>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="heroName" class="checkout-input" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="heroEmail" class="checkout-input" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <div class="phone-input-group">
+                                    <select class="country-code">
+                                        <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                                        <option value="+93">🇦🇫 +93 (Afghanistan)</option>
+                                        <option value="+355">🇦🇱 +355 (Albania)</option>
+                                        <option value="+213">🇩🇿 +213 (Algeria)</option>
+                                        <option value="+244">🇦🇴 +244 (Angola)</option>
+                                        <option value="+54">🇦🇷 +54 (Argentina)</option>
+                                        <option value="+374">🇦🇲 +374 (Armenia)</option>
+                                        <option value="+61">🇦🇺 +61 (Australia)</option>
+                                        <option value="+43">🇦🇹 +43 (Austria)</option>
+                                        <option value="+994">🇦🇿 +994 (Azerbaijan)</option>
+                                        <option value="+973">🇧🇭 +973 (Bahrain)</option>
+                                        <option value="+880">🇧🇩 +880 (Bangladesh)</option>
+                                        <option value="+375">🇧🇾 +375 (Belarus)</option>
+                                        <option value="+32">🇧🇪 +32 (Belgium)</option>
+                                        <option value="+229">🇧🇯 +229 (Benin)</option>
+                                        <option value="+55">🇧🇷 +55 (Brazil)</option>
+                                        <option value="+359">🇧🇬 +359 (Bulgaria)</option>
+                                        <option value="+226">🇧🇫 +226 (Burkina Faso)</option>
+                                        <option value="+257">🇧🇮 +257 (Burundi)</option>
+                                        <option value="+855">🇰🇭 +855 (Cambodia)</option>
+                                        <option value="+237">🇨🇲 +237 (Cameroon)</option>
+                                        <option value="+1">🇨🇦 +1 (Canada)</option>
+                                        <option value="+56">🇨🇱 +56 (Chile)</option>
+                                        <option value="+86">🇨🇳 +86 (China)</option>
+                                        <option value="+57">🇨🇴 +57 (Colombia)</option>
+                                        <option value="+243">🇨🇩 +243 (Congo DR)</option>
+                                        <option value="+506">🇨🇷 +506 (Costa Rica)</option>
+                                        <option value="+385">🇭🇷 +385 (Croatia)</option>
+                                        <option value="+53">🇨🇺 +53 (Cuba)</option>
+                                        <option value="+357">🇨🇾 +357 (Cyprus)</option>
+                                        <option value="+420">🇨🇿 +420 (Czech Republic)</option>
+                                        <option value="+45">🇩🇰 +45 (Denmark)</option>
+                                        <option value="+593">🇪🇨 +593 (Ecuador)</option>
+                                        <option value="+20">🇪🇬 +20 (Egypt)</option>
+                                        <option value="+372">🇪🇪 +372 (Estonia)</option>
+                                        <option value="+251">🇪🇹 +251 (Ethiopia)</option>
+                                        <option value="+358">🇫🇮 +358 (Finland)</option>
+                                        <option value="+33">🇫🇷 +33 (France)</option>
+                                        <option value="+995">🇬🇪 +995 (Georgia)</option>
+                                        <option value="+49">🇩🇪 +49 (Germany)</option>
+                                        <option value="+233">🇬🇭 +233 (Ghana)</option>
+                                        <option value="+30">🇬🇷 +30 (Greece)</option>
+                                        <option value="+502">🇬🇹 +502 (Guatemala)</option>
+                                        <option value="+509">🇭🇹 +509 (Haiti)</option>
+                                        <option value="+504">🇭🇳 +504 (Honduras)</option>
+                                        <option value="+852">🇭🇰 +852 (Hong Kong)</option>
+                                        <option value="+36">🇭🇺 +36 (Hungary)</option>
+                                        <option value="+354">🇮🇸 +354 (Iceland)</option>
+                                        <option value="+91">🇮🇳 +91 (India)</option>
+                                        <option value="+62">🇮🇩 +62 (Indonesia)</option>
+                                        <option value="+98">🇮🇷 +98 (Iran)</option>
+                                        <option value="+964">🇮🇶 +964 (Iraq)</option>
+                                        <option value="+353">🇮🇪 +353 (Ireland)</option>
+                                        <option value="+972">🇮🇱 +972 (Israel)</option>
+                                        <option value="+39">🇮🇹 +39 (Italy)</option>
+                                        <option value="+1">🇯🇲 +1 (Jamaica)</option>
+                                        <option value="+81">🇯🇵 +81 (Japan)</option>
+                                        <option value="+962">🇯🇴 +962 (Jordan)</option>
+                                        <option value="+7">🇰🇿 +7 (Kazakhstan)</option>
+                                        <option value="+254">🇰🇪 +254 (Kenya)</option>
+                                        <option value="+965">🇰🇼 +965 (Kuwait)</option>
+                                        <option value="+371">🇱🇻 +371 (Latvia)</option>
+                                        <option value="+961">🇱🇧 +961 (Lebanon)</option>
+                                        <option value="+231">🇱🇷 +231 (Liberia)</option>
+                                        <option value="+218">🇱🇾 +218 (Libya)</option>
+                                        <option value="+370">🇱🇹 +370 (Lithuania)</option>
+                                        <option value="+352">🇱🇺 +352 (Luxembourg)</option>
+                                        <option value="+261">🇲🇬 +261 (Madagascar)</option>
+                                        <option value="+265">🇲🇼 +265 (Malawi)</option>
+                                        <option value="+60">🇲🇾 +60 (Malaysia)</option>
+                                        <option value="+223">🇲🇱 +223 (Mali)</option>
+                                        <option value="+356">🇲🇹 +356 (Malta)</option>
+                                        <option value="+52">🇲🇽 +52 (Mexico)</option>
+                                        <option value="+373">🇲🇩 +373 (Moldova)</option>
+                                        <option value="+212">🇲🇦 +212 (Morocco)</option>
+                                        <option value="+258">🇲🇿 +258 (Mozambique)</option>
+                                        <option value="+31">🇳🇱 +31 (Netherlands)</option>
+                                        <option value="+64">🇳🇿 +64 (New Zealand)</option>
+                                        <option value="+227">🇳🇪 +227 (Niger)</option>
+                                        <option value="+234" selected>🇳🇬 +234 (Nigeria)</option>
+                                        <option value="+47">🇳🇴 +47 (Norway)</option>
+                                        <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                                        <option value="+507">🇵🇦 +507 (Panama)</option>
+                                        <option value="+51">🇵🇪 +51 (Peru)</option>
+                                        <option value="+63">🇵🇭 +63 (Philippines)</option>
+                                        <option value="+48">🇵🇱 +48 (Poland)</option>
+                                        <option value="+351">🇵🇹 +351 (Portugal)</option>
+                                        <option value="+974">🇶🇦 +974 (Qatar)</option>
+                                        <option value="+40">🇷🇴 +40 (Romania)</option>
+                                        <option value="+7">🇷🇺 +7 (Russia)</option>
+                                        <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                                        <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+                                        <option value="+221">🇸🇳 +221 (Senegal)</option>
+                                        <option value="+381">🇷🇸 +381 (Serbia)</option>
+                                        <option value="+65">🇸🇬 +65 (Singapore)</option>
+                                        <option value="+421">🇸🇰 +421 (Slovakia)</option>
+                                        <option value="+386">🇸🇮 +386 (Slovenia)</option>
+                                        <option value="+252">🇸🇴 +252 (Somalia)</option>
+                                    </select>
+                                    <input type="tel" id="heroPhone" class="phone-number" placeholder="Enter a phone number" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="order-summary">
+                        <div class="summary-row">
+                            <span>Cart Total</span>
+                            <span>₦ 9,999</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Transaction Fee</span>
+                            <span>₦ 450</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>₦ 10,450</span>
+                        </div>
+                        <button type="submit" form="heroPaymentForm" class="checkout-pay-btn">Pay now</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -77,7 +223,7 @@
                         <p>Create stunning presentations that captivate any audience with Google Slides.</p>
                     </div>
                 </div>
-                 <div class="mastery-item">
+                <div class="mastery-item">
                     <img src="https://www.gstatic.com/images/branding/product/1x/forms_2020q4_48dp.png" alt="Google Forms Icon">
                     <div>
                         <h3>Effortless Surveys</h3>
@@ -101,7 +247,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="testimonials">
         <div class="container">
             <h2>Join Our Growing Community of Successful Graduates</h2>
@@ -122,8 +268,8 @@ I was truly impressed. It is worth every penny and time"</p>
                         <img src="IMG/Christabel.jpg" alt="Student Photo"> <span>Christabel</span>
                     </div>
                 </div>
-                 <div class="testimonial-card">
-                <p>I thought I knew everything about Google Workspace—after all, I just finished 8 weeks of virtual assistant training. But when I joined Success Agbeyegbe’s 4-week Google Workspace course, I realized I’d only scratched the surface. We’ve only had two sessions, and I’m already seeing how much more there is to learn. This morning, I found myself practicing what she taught using Google Docs—and smiling while at it. I love getting real value for my money. If you haven’t enrolled yet, don’t miss the next batch. It’s an eye-opener!</p>
+                <div class="testimonial-card">
+                    <p>I thought I knew everything about Google Workspace—after all, I just finished 8 weeks of virtual assistant training. But when I joined Success Agbeyegbe's 4-week Google Workspace course, I realized I'd only scratched the surface. We've only had two sessions, and I'm already seeing how much more there is to learn. This morning, I found myself practicing what she taught using Google Docs—and smiling while at it. I love getting real value for my money. If you haven't enrolled yet, don't miss the next batch. It's an eye-opener!</p>
                     <div class="author">
                         <img src="IMG/Rofiat.jpg" alt="Student Photo"> <span>Rofiat</span>
                     </div>
@@ -139,8 +285,55 @@ I was truly impressed. It is worth every penny and time"</p>
             
             <div class="seats-left">Only <span id="seats">25</span> Seats Left at This Price!</div>
             
-            <a href="https://selar.com/googleworkspacetraining" class="btn">Claim Your Spot Now!</a>
+            <button id="urgencyPayBtn" class="btn">Claim Your Spot Now!</button>            
             <small>The price increases to ₦15,000 after this offer ends.</small>
+
+            <!-- Hidden Form for Urgency Section -->
+            <div id="urgencyFormContainer" class="hidden-form">
+                <div class="checkout-container">
+                    <div class="checkout-header">
+                        <div class="checkout-title">My cart → Checkout</div>
+                        <button class="checkout-close" id="closeUrgencyForm">×</button>
+                    </div>
+                    <form id="urgencyPaymentForm" class="checkout-form">
+                        <div class="form-section">
+                            <h3>Contact information</h3>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="urgencyName" class="checkout-input" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="urgencyEmail" class="checkout-input" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <div class="phone-input-group">
+                                    <select class="country-code">
+                                        <option value="+234">+234</option>
+                                    </select>
+                                    <input type="tel" id="urgencyPhone" class="phone-number" placeholder="Enter a phone number" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="order-summary">
+                        <div class="summary-row">
+                            <span>Cart Total</span>
+                            <span>₦ 9,999</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Transaction Fee</span>
+                            <span>₦ 150</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>₦ 10,149</span>
+                        </div>
+                        <button type="submit" form="urgencyPaymentForm" class="checkout-pay-btn">Pay now</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -160,11 +353,11 @@ I was truly impressed. It is worth every penny and time"</p>
                     <h3>Practical Assignments</h3>
                     <p>Apply what you learn with hands-on assignments that build real-world skills.</p>
                 </div>
-                 <div class="detail-item">
+                <div class="detail-item">
                     <h3>Personalized Feedback</h3>
                     <p>Receive constructive feedback on your work to help you improve.</p>
                 </div>
-                 <div class="detail-item">
+                <div class="detail-item">
                     <h3>Certificate of Completion</h3>
                     <p>Get a professional certificate to add to your CV and LinkedIn profile.</p>
                 </div>
@@ -216,7 +409,7 @@ I was truly impressed. It is worth every penny and time"</p>
                         <p>Yes, the course fee of ₦10,000 is a one-time payment. There are no hidden charges or recurring fees.</p>
                     </div>
                 </div>
-                 <div class="faq-item">
+                <div class="faq-item">
                     <button class="faq-question">When does the course start?</button>
                     <div class="faq-answer">
                         <p>The next batch (Batch 4.0) is scheduled to start in July 2025. Enrolling now secures your spot and gives you access to the early bird pricing.</p>
@@ -226,7 +419,7 @@ I was truly impressed. It is worth every penny and time"</p>
         </div>
     </section>
 
-        <!-- Final CTA Section -->
+    <!-- Final CTA Section -->
     <section class="final-cta" id="register">
         <div class="container">
             <div class="spots-left">⚠️ Only 15 Spots Left in Batch 4.0!</div>
@@ -235,50 +428,94 @@ I was truly impressed. It is worth every penny and time"</p>
                 Join hundreds of successful graduates who transformed their careers with Google Workspace skills
             </p>
             
-           <div style="background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; margin: 40px auto; max-width: 600px; text-align: center;">
-    <h3 style="margin-bottom: 20px;">Ready to Register?</h3>
-    <p style="margin-bottom: 30px;">Choose your preferred payment method:</p>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; margin: 40px auto; max-width: 600px; text-align: center;">
+                <h3 style="margin-bottom: 20px;">Ready to Register?</h3>
+                <p style="margin-bottom: 30px;">Choose your preferred payment method:</p>
 
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://selar.com/googleworkspacetraining" class="cta-button brown-button">
-            💳 Pay with Selar
-        </a>
-        <a href="https://wa.me/+2349169868572" class="cta-button whatsapp">
-            💬 Pay via Bank Transfer
-        </a>
-    </div>
+                <a href="https://wa.me/+2349169868572" class="cta-button whatsapp">
+                    Pay via Bank Transfer
+                </a>
 
-    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem;">
-        <strong>Bank Details:</strong><br>
-        Account Name: First Tech Hub Solutions<br>
-        Account Number: 3002547391<br>
-        Bank: KUDA BANK
-    </div>
+                <!-- Trigger Button for Hidden Form -->
+                <button id="openFormBtn" class="cta-button">Pay with Paystack</button>
 
-    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem;">
-       <p><strong>Send Payment Receipt Here:</strong></p>
-        <a href="https://wa.me/+2349169868572" class="cta-button whatsapp">
-            Chat On WhatsApp
-        </a>
-    </div>
-</div>
+                <!-- Hidden Form -->
+                <div id="formContainer" class="hidden-form">
+                    <div class="checkout-container">
+                        <div class="checkout-header">
+                            <div class="checkout-title">My cart → Checkout</div>
+                            <button class="checkout-close" id="closeForm">×</button>
+                        </div>
+                        <form id="paymentForm" class="checkout-form">
+                            <div class="form-section">
+                                <h3>Contact information</h3>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" id="name" class="checkout-input" placeholder="Full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="formEmail" class="checkout-input" placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <div class="phone-input-group">
+                                        <select class="country-code">
+                                            <option value="+234">+234</option>
+                                        </select>
+                                        <input type="tel" id="phone" class="phone-number" placeholder="Enter a phone number" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <span>Cart Total</span>
+                                <span>₦ 9,999</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Transaction Fee</span>
+                                <span>₦ 450</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span>₦ 10,450</span>
+                            </div>
+                            <button type="submit" form="paymentForm" class="checkout-pay-btn">Pay now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem;">
+                <strong>Bank Details:</strong><br>
+                Account Name: First Tech Hub Solutions<br>
+                Account Number: 3002547391<br>
+                Bank: KUDA BANK
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); font-size: 0.9rem;">
+                <p><strong>Send Payment Receipt Here:</strong></p>
+                <a href="https://wa.me/+2349169868572" class="cta-button whatsapp">
+                    Chat On WhatsApp
+                </a>
+            </div>
+        </div>
     </section>
-
    
-    
-   <footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 First Tech Hub Solutions. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.4;">
-            This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook in any way. “Facebook” is a trademark of Meta Platforms, Inc.
-        </p>
-        <p style="margin-top: 0.25rem; font-size: 0.875rem;">
-            Designed by <a href="https://linktr.ee/successagbeyegbe" target="_blank" style="color: #ffffff; text-decoration: underline;">Success Agbeyegbe</a>
-        </p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 First Tech Hub Solutions. All Rights Reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.4;">
+                This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook in any way. "Facebook" is a trademark of Meta Platforms, Inc.
+            </p>
+            <p style="margin-top: 0.25rem; font-size: 0.875rem;">
+                Designed by <a href="https://linktr.ee/successagbeyegbe" target="_blank" style="color: #ffffff; text-decoration: underline;">Success Agbeyegbe</a>
+            </p>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
-         
-</body>
+
+   </body>
 </html>
