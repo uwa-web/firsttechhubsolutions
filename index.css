@@ -1,5 +1,4 @@
-
-        /* --- General & Global Styles --- */
+/* --- General & Global Styles --- */
         :root {
             --primary-color: #6F4E37; /* Coffee Brown */
             --secondary-color: #4a3728; /* Darker Brown */
@@ -48,7 +47,7 @@
             padding: 12px 24px;
             border: none;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 800; /* Made bold */
             color: #ffffff;
             background: #6F4E37;
             text-decoration: none;
@@ -56,6 +55,7 @@
             cursor: pointer;
             display: inline-block;
             margin: 10px;
+            font-size: 16px; /* Added for consistency */
         } 
 
         .btn {
@@ -65,10 +65,11 @@
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 800; /* Made bold */
             transition: background-color 0.3s ease, transform 0.3s ease;
             border: none;
             cursor: pointer;
+            font-size: 16px; /* Added for consistency */
         }
 
         .btn:hover, .cta-button:hover {
@@ -525,7 +526,7 @@
             padding: 15px;
             border-radius: 8px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 800; /* Made bold */
             cursor: pointer;
             margin-top: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -551,4 +552,3 @@
             #timer { font-size: 1.8rem; }
             .email-input { width: 100%; margin-bottom: 10px; }
         }
-   
