@@ -4,7 +4,7 @@
             const timerElement = document.getElementById("timer");
             if (!timerElement) return;
 
-            const countDownDate = new Date("December 31, 2025 23:59:59").getTime();
+            const countDownDate = new Date("September 10, 2025 23:59:59").getTime();
 
             function pad(num) {
                 return num < 10 ? "0" + num : num;
@@ -202,4 +202,5 @@
             payWithPaystack(email, fullName, phone, 'thank-you.html');
         });
    
+
 
